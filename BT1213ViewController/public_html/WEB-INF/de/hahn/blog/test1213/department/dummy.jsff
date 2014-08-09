@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelStretchLayout id="psl1" startWidth="250px">
+        <f:facet name="bottom"/>
+        <f:facet name="center">
+            <af:panelGroupLayout id="pgl1" layout="vertical">
+                <af:inputText label="Label 1" id="it1" binding="#{DummyTestBean.name}" value="#{bindings.myTestString1.inputValue}"/>
+                <af:button text="button 1" id="b1" action="#{DummyTestBean.b1_action}"/>
+                <af:inputText value="#{bindings.CountryName.inputValue}" simple="true" required="#{bindings.CountryName.hints.mandatory}"
+                              columns="#{bindings.CountryName.hints.displayWidth}" maximumLength="#{bindings.CountryName.hints.precision}"
+                              shortDesc="#{bindings.CountryName.hints.tooltip}" id="it2">
+                    <f:validator binding="#{bindings.CountryName.validator}"/>
+                </af:inputText>
+                <af:inputText value="#{bindings.RegionId.inputValue}" label="#{bindings.RegionId.hints.label}" required="#{bindings.RegionId.hints.mandatory}"
+                              columns="#{bindings.RegionId.hints.displayWidth}" maximumLength="#{bindings.RegionId.hints.precision}"
+                              shortDesc="#{bindings.RegionId.hints.tooltip}" id="it3">
+                    <f:validator binding="#{bindings.RegionId.validator}"/>
+                    <af:convertNumber groupingUsed="false" pattern="#{bindings.RegionId.format}"/>
+                </af:inputText>
+            </af:panelGroupLayout>
+        </f:facet>
+        <f:facet name="start">
+            <af:tree value="#{bindings.CountriesView.treeModel}" var="node" selectionListener="#{bindings.CountriesView.treeModel.makeCurrent}"
+                     rowSelection="single" id="t1">
+                <f:facet name="nodeStamp">
+                    <af:outputText value="#{node}" id="ot1"/>
+                </f:facet>
+            </af:tree>
+        </f:facet>
+        <f:facet name="end"/>
+        <f:facet name="top"/>
+    </af:panelStretchLayout>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:DummyTestBean-->
+</ui:composition>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="department-btf">
+    <default-activity>Departments</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__1">
+      <managed-bean-name>DummyTestBean</managed-bean-name>
+      <managed-bean-class>de.hahn.blog.test1213.view.department.DummyTestBean</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <view id="Departments">
+      <page>/WEB-INF/de/hahn/blog/test1213/department/Departments.jsff</page>
+    </view>
+    <view id="dummy">
+      <page>/WEB-INF/de/hahn/blog/test1213/department/dummy.jsff</page>
+    </view>
+    <control-flow-rule id="__2">
+      <from-activity-id>Departments</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>goDummy</from-outcome>
+        <to-activity-id>dummy</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

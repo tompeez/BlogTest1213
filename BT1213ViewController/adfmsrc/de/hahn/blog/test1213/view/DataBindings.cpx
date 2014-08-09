@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.10.8" id="DataBindings" SeparateXMLFiles="false"
+             Package="de.hahn.blog.test1213.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding" className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/WEB-INF/de/hahn/blog/test1213/department/Departments.jsff" usageId="de_hahn_blog_test1213_view_DepartmentsPageDef"/>
+    <page path="/Start.jsf" usageId="de_hahn_blog_test1213_view_StartPageDef"/>
+    <page path="/WEB-INF/de/hahn/blog/test1213/department/dummy.jsff" usageId="de_hahn_blog_test1213_view_dummyPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_test1213_view_DepartmentsPageDef" path="de.hahn.blog.test1213.department.DepartmentsPageDef"/>
+    <page id="de_hahn_blog_test1213_view_StartPageDef" path="de.hahn.blog.test1213.view.pageDefs.StartPageDef"/>
+    <page id="de_hahn_blog_test1213_view_dummyPageDef" path="de.hahn.blog.test1213.department.dummyPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="BT1213AppModuleDataControl" Package="de.hahn.blog.test1213.model.adfbc.service"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true" SupportsFindMode="true" SupportsRangesize="true"
+                     SupportsResetState="true" SupportsSortCollection="true" Configuration="BT1213AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

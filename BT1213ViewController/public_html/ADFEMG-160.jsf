@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="PanelForm.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                        <af:outputText value="PanelForm Test" id="ot1" inlineStyle="font-size:xx-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Content -->
+                        <af:panelFormLayout id="pfl1">
+                            <af:outputLabel value="Test Field 1" id="ol1" inlineStyle="font-size:x-large;"/>
+                            <af:outputLabel value="Test Field 2" id="ol2"/>
+                            <af:outputLabel value="Test Field 3" id="ol3"/>
+                            <f:facet name="footer"/>
+                        </af:panelFormLayout>
+                        <af:panelFormLayout id="pfl2">
+                            <af:inputText label="InputText 1" id="it1" inlineStyle="font-size:xx-large;"/>
+                            <af:inputText label="InputText 2" id="it2"/>
+                            <af:inputText label="InputText 3" id="it3" inlineStyle="font-size:xx-large;"/>
+                            <f:facet name="footer"/>
+                        </af:panelFormLayout>
+                        <af:panelGroupLayout id="pgl2">
+                            <af:inputText label="Label 4" id="it4" inlineStyle="font-size:medium;"/>
+                            <af:inputText label="Label 5" id="it5"/>
+                            <af:inputText label="Label 6" id="it6"/>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">Departments</property>
+      <property
+         name="page">/WEB-INF/de/hahn/blog/test1213/department/Departments.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Departments&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">175.04688</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">231.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">dummy</property>
+      <property
+         name="page">/WEB-INF/de/hahn/blog/test1213/department/dummy.jsff</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>dummy&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">157.03125</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">447.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">goDummy</property>
+      <property
+         name="sdm:polyPoints">R50,272.0,175.0625,406.0,157.04688,L50</property>
+   </ControlFlowCase>
+</SDM>
