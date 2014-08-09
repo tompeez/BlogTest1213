@@ -9,7 +9,6 @@
                         <!-- Header -->
                         <af:panelGroupLayout id="pgl2">
                             <af:outputText value="Test JDev 12.1.3" id="ot1" inlineStyle="font-size:x-large;"/>
-                            <af:link text="link 1" id="l1"/>
                         </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
