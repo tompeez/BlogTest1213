@@ -46,7 +46,7 @@
             </af:outputText>
           </af:column>
         </af:table>
-        <af:button text="go Dummy" id="b1" action="goDummy"/>
+        <af:button text="go Dummy" id="b1" action="goDummy" actionListener="#{DummyTestBean.myDummyListener}"/>
       </af:gridCell>
     </af:gridRow>
   </af:panelGridLayout>
