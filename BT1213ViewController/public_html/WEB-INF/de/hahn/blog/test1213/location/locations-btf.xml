@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="locations-btf">
+    <default-activity>findCityByName</default-activity>
+    <transaction>
+      <requires-transaction/>
+    </transaction>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <input-parameter-definition id="__3">
+      <name>cityParameter</name>
+      <value>#{pageFlowScope.paramName}</value>
+      <class>java.lang.String</class>
+    </input-parameter-definition>
+    <method-call id="findCityByName">
+      <method>#{bindings.findCityByName.execute}</method>
+      <outcome>
+        <fixed-outcome>findCityByName</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="showLocations">
+      <page>/WEB-INF/de/hahn/blog/test1213/location/showLocations.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>findCityByName</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>findCityByName</from-outcome>
+        <to-activity-id>showLocations</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
