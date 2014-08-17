@@ -9,11 +9,19 @@
     <page path="/WEB-INF/de/hahn/blog/test1213/department/Departments.jsff" usageId="de_hahn_blog_test1213_view_DepartmentsPageDef"/>
     <page path="/Start.jsf" usageId="de_hahn_blog_test1213_view_StartPageDef"/>
     <page path="/WEB-INF/de/hahn/blog/test1213/department/dummy.jsff" usageId="de_hahn_blog_test1213_view_dummyPageDef"/>
+    <page path="/WEB-INF/de/hahn/blog/test1213/location/locations-btf.xml#locations-btf@findCityByName"
+          usageId="de_hahn_blog_test1213_view_locations_btf_locations_btf_findCityByNamePageDef"/>
+    <page path="/WEB-INF/de/hahn/blog/test1213/location/showLocations.jsff" usageId="de_hahn_blog_test1213_view_showLocationsPageDef"/>
+    <page path="/ExecuteWithParamTest.jsf" usageId="de_hahn_blog_test1213_view_ExecuteWithParamTestPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="de_hahn_blog_test1213_view_DepartmentsPageDef" path="de.hahn.blog.test1213.department.DepartmentsPageDef"/>
     <page id="de_hahn_blog_test1213_view_StartPageDef" path="de.hahn.blog.test1213.view.pageDefs.StartPageDef"/>
     <page id="de_hahn_blog_test1213_view_dummyPageDef" path="de.hahn.blog.test1213.department.dummyPageDef"/>
+    <page id="de_hahn_blog_test1213_view_locations_btf_locations_btf_findCityByNamePageDef"
+          path="de.hahn.blog.test1213.location.locations_btf_locations_btf_findCityByNamePageDef"/>
+    <page id="de_hahn_blog_test1213_view_showLocationsPageDef" path="de.hahn.blog.test1213.view.pageDefs.showLocationsPageDef"/>
+    <page id="de_hahn_blog_test1213_view_ExecuteWithParamTestPageDef" path="de.hahn.blog.test1213.view.pageDefs.ExecuteWithParamTestPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="BT1213AppModuleDataControl" Package="de.hahn.blog.test1213.model.adfbc.service"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="ExecuteWithParamTestPageDef"
+                Package="de.hahn.blog.test1213.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Name="CityName" Type="java.lang.String"/>
+    </variableIterator>
+    <taskFlow id="locationsbtf1" taskFlowId="/WEB-INF/de/hahn/blog/test1213/location/locations-btf.xml#locations-btf" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding" Refresh="ifNeeded">
+      <parameters>
+        <parameter id="cityParameter" value="#{bindings.CityName1.inputValue}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="variables" id="CityName1">
+      <AttrNames>
+        <Item Value="CityName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

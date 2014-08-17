@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="locations_btf_locations_btf_findCityByNamePageDef"
+                Package="de.hahn.blog.test1213.location" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="findCityByName" RequiresUpdateModel="true" Action="invokeMethod" MethodName="findCityByName" IsViewObjectMethod="true"
+                  DataControl="BT1213AppModuleDataControl" InstanceName="data.BT1213AppModuleDataControl.LocationsView"
+                  ReturnName="data.BT1213AppModuleDataControl.methodResults.findCityByName_BT1213AppModuleDataControl_LocationsView_findCityByName_result">
+      <NamedData NDName="name" NDValue="#{pageFlowScope.paramName}" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>
