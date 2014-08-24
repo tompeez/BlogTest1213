@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="LocationsView"
-  Version="12.1.3.10.8"
+  Version="12.1.3.9.1"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -14,7 +14,17 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   FetchSize="25"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="de.hahn.blog.test1213.model.adfbc.views.LocationsViewImpl"
+  ComponentInterface="de.hahn.blog.test1213.model.adfbc.views.common.LocationsView"
+  ClientProxyName="de.hahn.blog.test1213.model.adfbc.views.client.LocationsViewClient">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  <Variable
+    Name="bindCity"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
   <EntityUsage
     Name="Locations"
     Entity="de.hahn.blog.test1213.model.adfbc.entities.Locations"/>
@@ -56,9 +66,75 @@
     EntityAttrName="CountryId"
     EntityUsage="Locations"
     AliasName="COUNTRY_ID"/>
+  <ViewCriteria
+    Name="LocationsViewCriteria"
+    ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.LocationsView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="LocationsViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="LocationsViewCriteria_LocationsViewCriteria_row_0_City"
+        ViewAttribute="City"
+        Operator="STARTSWITH"
+        Conjunction="AND"
+        Value=":bindCity"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="DepartmentsView"
     ViewLink="de.hahn.blog.test1213.model.adfbc.views.viewlinks.DeptLocFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="getbindCity"
+      MethodName="getbindCity">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="setbindCity"
+      MethodName="setbindCity">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="findCityByName"
+      MethodName="findCityByName">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="name"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
 </ViewObject>

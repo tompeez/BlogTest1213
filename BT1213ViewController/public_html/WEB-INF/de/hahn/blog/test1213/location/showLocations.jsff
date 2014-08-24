@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="100%" id="gr1">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <af:table value="#{bindings.LocationsView.collectionModel}" var="row" rows="#{bindings.LocationsView.rangeSize}"
+                              emptyText="#{bindings.LocationsView.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.LocationsView.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.LocationsView.collectionModel.makeCurrent}" rowSelection="single"
+                              fetchSize="#{bindings.LocationsView.rangeSize}" filterModel="#{bindings.LocationsViewQuery.queryDescriptor}"
+                              queryListener="#{bindings.LocationsViewQuery.processQuery}" filterVisible="true" varStatus="vs" id="t1">
+                        <af:column sortProperty="#{bindings.LocationsView.hints.LocationId.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.LocationId.label}" id="c1">
+                            <af:outputText value="#{row.LocationId}" shortDesc="#{bindings.LocationsView.hints.LocationId.tooltip}" id="ot1">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationsView.hints.LocationId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.LocationsView.hints.StreetAddress.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.StreetAddress.label}" id="c2">
+                            <af:outputText value="#{row.StreetAddress}" shortDesc="#{bindings.LocationsView.hints.StreetAddress.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.LocationsView.hints.PostalCode.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.PostalCode.label}" id="c3">
+                            <af:outputText value="#{row.PostalCode}" shortDesc="#{bindings.LocationsView.hints.PostalCode.tooltip}" id="ot3"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.LocationsView.hints.City.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.City.label}" id="c4">
+                            <af:outputText value="#{row.City}" shortDesc="#{bindings.LocationsView.hints.City.tooltip}" id="ot4"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.LocationsView.hints.StateProvince.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.StateProvince.label}" id="c5">
+                            <af:outputText value="#{row.StateProvince}" shortDesc="#{bindings.LocationsView.hints.StateProvince.tooltip}" id="ot5"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.LocationsView.hints.CountryId.name}" filterable="true" sortable="true"
+                                   headerText="#{bindings.LocationsView.hints.CountryId.label}" id="c6">
+                            <af:outputText value="#{row.CountryId}" shortDesc="#{bindings.LocationsView.hints.CountryId.tooltip}" id="ot6"/>
+                        </af:column>
+                    </af:table>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+</ui:composition>
