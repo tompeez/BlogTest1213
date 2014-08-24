@@ -13,7 +13,7 @@
                 <af:gridRow height="50px" id="gr2">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Content -->
-                        <af:inputText label="Label 1" id="it1" value="#{bindings.CityName1.inputValue}" autoSubmit="true"/>
+                        <af:inputText label="Enter City Name" id="it1" value="#{bindings.CityName1.inputValue}" autoSubmit="true"/>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow id="gr3">
