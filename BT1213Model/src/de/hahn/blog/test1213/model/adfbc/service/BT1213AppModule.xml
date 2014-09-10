@@ -4,7 +4,7 @@
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="BT1213AppModule"
-  Version="12.1.3.10.8"
+  Version="12.1.3.9.1"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
@@ -40,6 +40,13 @@
   <ViewUsage
     Name="CountriesOfRegionView"
     ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.CountriesView"/>
+  <ViewUsage
+    Name="DepartmentsORTest"
+    ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.DepartmentsView">
+    <ViewCriteriaUsage
+      Name="DepartmentsORTest"
+      FullName="de.hahn.blog.test1213.model.adfbc.views.DepartmentsView.DepartmentsORTest"/>
+  </ViewUsage>
   <ViewLinkUsage
     Name="DeptMgrFkLink1"
     ViewLinkObjectName="de.hahn.blog.test1213.model.adfbc.views.viewlinks.DeptMgrFkLink"
