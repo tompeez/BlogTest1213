@@ -3,7 +3,7 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="DepartmentsORTest" RangeSize="25" DataControl="BT1213AppModuleDataControl" id="DepartmentsViewIterator"/>
+    <iterator Binds="DepartmentsView" RangeSize="25" DataControl="BT1213AppModuleDataControl" id="DepartmentsViewIterator"/>
     <searchRegion Criteria="__ImplicitViewCriteria__" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" Binds="DepartmentsViewIterator"
                   id="ImplicitViewCriteriaQuery"/>
   </executables>
