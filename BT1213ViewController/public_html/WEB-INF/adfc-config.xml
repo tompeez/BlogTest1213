@@ -9,6 +9,12 @@
   <view id="ExecuteWithParamTest">
     <page>/ExecuteWithParamTest.jsf</page>
   </view>
+  <view id="PanelTab">
+    <page>/PanelTab.jsf</page>
+  </view>
+  <view id="view1">
+    <page>/view1.jsf</page>
+  </view>
   <managed-bean id="__1">
     <managed-bean-name>DynamicRegionBean</managed-bean-name>
     <managed-bean-class>de.hahn.blog.test1213.view.DynamicRegionBean</managed-bean-class>

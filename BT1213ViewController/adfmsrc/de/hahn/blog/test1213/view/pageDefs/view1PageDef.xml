@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="view1PageDef" Package="de.hahn.blog.test1213.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <page path="de.hahn.blog.test1213.view.pageDefs.myTest_templateDef1PageDef" id="ptb1" Refresh="ifNeeded"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

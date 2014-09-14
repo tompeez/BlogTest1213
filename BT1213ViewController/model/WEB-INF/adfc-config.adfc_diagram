@@ -47,4 +47,34 @@
       <property
          name="x">349.0</property>
    </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">PanelTab</property>
+      <property
+         name="page">/PanelTab.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PanelTab&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">66.03125</property>
+      <property
+         name="x">403.0</property>
+   </View>
+   <View
+      id="View7">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="page">/view1.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">308.03125</property>
+      <property
+         name="x">612.0</property>
+   </View>
 </SDM>

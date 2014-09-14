@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="PanelTab.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                        <af:outputText value="PanelTab left Test" id="ot1" inlineStyle="font-size:x-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Content -->
+                        <af:panelTabbed position="left" id="pt1">
+                            <af:showDetailItem id="tab1" text="Tab Label 1" icon="/images/Age-Child-Male-Dark-icon32.png" disclosed="true">
+                                <af:inputText label="Label 1" id="it1"/>
+                            </af:showDetailItem>
+                            <af:showDetailItem id="tab2" text="Tab Label 2" icon="/images/Office-Customer-Female-Light-icon24.png"/>
+                            <af:showDetailItem id="tab3" text="Tab Label 3" icon="/images/Office-Customer-Male-Dark-icon24.png"/>
+                        </af:panelTabbed>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
