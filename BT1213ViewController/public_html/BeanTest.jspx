@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="BeanTest.jspx" id="d1" binding="#{backingBeanScope.backing_BeanTest.d1}">
+            <af:messages id="m1"/>
+            <af:form id="f1" binding="#{backingBeanScope.backing_BeanTest.f1}">
+                <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_BeanTest.pgl1}">
+                    <af:gridRow height="50px" id="gr2" binding="#{backingBeanScope.backing_BeanTest.gr2}">
+                        <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2" binding="#{backingBeanScope.backing_BeanTest.gc2}">
+                            <!-- Header -->
+                            <af:inputText label="Label 1" id="it1" binding="#{backingBeanScope.backing_BeanTest.it1}"/>
+                            <af:outputText value="outputText1" id="ot5" binding="#{backingBeanScope.backing_BeanTest.ot5}"/>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow height="100%" id="gr1" binding="#{backingBeanScope.backing_BeanTest.gr1}">
+                        <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1" binding="#{backingBeanScope.backing_BeanTest.gc1}">
+                            <!-- Content -->
+                            <af:table value="#{bindings.DepartmentsORTest.collectionModel}" var="row" rows="#{bindings.DepartmentsORTest.rangeSize}"
+                                      emptyText="#{bindings.DepartmentsORTest.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.DepartmentsORTest.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.DepartmentsORTest.collectionModel.makeCurrent}" rowSelection="single"
+                                      fetchSize="#{bindings.DepartmentsORTest.rangeSize}" filterModel="#{bindings.DepartmentsORTestQuery.queryDescriptor}"
+                                      queryListener="#{bindings.DepartmentsORTestQuery.processQuery}" filterVisible="true" varStatus="vs" id="t1">
+                                <af:column sortProperty="#{bindings.DepartmentsORTest.hints.DepartmentId.name}" filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartmentsORTest.hints.DepartmentId.label}" id="c1">
+                                    <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.DepartmentsORTest.hints.DepartmentId.tooltip}" id="ot1">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsORTest.hints.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsORTest.hints.DepartmentName.name}" filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartmentsORTest.hints.DepartmentName.label}" id="c2">
+                                    <af:outputText value="#{row.DepartmentName}" shortDesc="#{bindings.DepartmentsORTest.hints.DepartmentName.tooltip}"
+                                                   id="ot2"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsORTest.hints.ManagerId.name}" filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartmentsORTest.hints.ManagerId.label}" id="c3">
+                                    <af:outputText value="#{row.ManagerId}" shortDesc="#{bindings.DepartmentsORTest.hints.ManagerId.tooltip}" id="ot3">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsORTest.hints.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsORTest.hints.LocationId.name}" filterable="true" sortable="true"
+                                           headerText="#{bindings.DepartmentsORTest.hints.LocationId.label}" id="c4">
+                                    <af:outputText value="#{row.LocationId}" shortDesc="#{bindings.DepartmentsORTest.hints.LocationId.tooltip}" id="ot4">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsORTest.hints.LocationId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:gridCell>
+                    </af:gridRow>
+                </af:panelGridLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_BeanTest-->
+</jsp:root>

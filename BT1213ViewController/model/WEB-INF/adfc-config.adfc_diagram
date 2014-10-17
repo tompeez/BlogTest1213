@@ -77,4 +77,19 @@
       <property
          name="x">612.0</property>
    </View>
+   <View
+      id="View8">
+      <property
+         name="activityId">BeanTest</property>
+      <property
+         name="page">/BeanTest.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>BeanTest&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">3.03125</property>
+      <property
+         name="x">702.0</property>
+   </View>
 </SDM>

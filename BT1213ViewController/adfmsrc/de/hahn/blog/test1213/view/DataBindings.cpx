@@ -15,6 +15,7 @@
     <page path="/ExecuteWithParamTest.jsf" usageId="de_hahn_blog_test1213_view_ExecuteWithParamTestPageDef"/>
     <page path="/myTest-templateDef1.jsf" usageId="de_hahn_blog_test1213_view_myTest_templateDef1PageDef"/>
     <page path="/view1.jsf" usageId="de_hahn_blog_test1213_view_view1PageDef"/>
+    <page path="/BeanTest.jspx" usageId="de_hahn_blog_test1213_view_BeanTestPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="de_hahn_blog_test1213_view_DepartmentsPageDef" path="de.hahn.blog.test1213.department.DepartmentsPageDef"/>
@@ -26,6 +27,7 @@
     <page id="de_hahn_blog_test1213_view_ExecuteWithParamTestPageDef" path="de.hahn.blog.test1213.view.pageDefs.ExecuteWithParamTestPageDef"/>
     <page id="de_hahn_blog_test1213_view_myTest_templateDef1PageDef" path="de.hahn.blog.test1213.view.pageDefs.myTest_templateDef1PageDef"/>
     <page id="de_hahn_blog_test1213_view_view1PageDef" path="de.hahn.blog.test1213.view.pageDefs.view1PageDef"/>
+    <page id="de_hahn_blog_test1213_view_BeanTestPageDef" path="de.hahn.blog.test1213.view.pageDefs.BeanTestPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="BT1213AppModuleDataControl" Package="de.hahn.blog.test1213.model.adfbc.service"
