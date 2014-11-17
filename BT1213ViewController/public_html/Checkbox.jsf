@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Checkbox.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Header -->
+                        <af:outputText value="CheckBox Bean Attribute Test" id="ot1" inlineStyle="font-size:x-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Content -->
+                        <af:panelGroupLayout id="pgl2" layout="vertical">
+                            <af:selectBooleanCheckbox label="Property from file" id="sbc1" value="#{viewScope.CheckboxBean.myCheckBoxValue}"
+                                                      partialTriggers="b2 ot2"/>
+                            <af:button text="Submit" id="b1"/>
+                            <af:outputText value="State is #{viewScope.CheckboxBean.myCheckBoxValue}" id="ot2" partialTriggers="b1"/>
+                            <af:button text="Clear Checkboxvalue" id="b2" actionListener="#{viewScope.CheckboxBean.clearCheckBoxValue}"/>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
