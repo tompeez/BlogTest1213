@@ -18,6 +18,9 @@
   <view id="BeanTest">
     <page>/BeanTest.jspx</page>
   </view>
+  <view id="Checkbox">
+    <page>/Checkbox.jsf</page>
+  </view>
   <managed-bean id="__1">
     <managed-bean-name>DynamicRegionBean</managed-bean-name>
     <managed-bean-class>de.hahn.blog.test1213.view.DynamicRegionBean</managed-bean-class>
@@ -28,5 +31,10 @@
     <managed-bean-class>de.hahn.blog.test1213.view.backing.BeanTest</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1BeanTest.jspx-->
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>CheckboxBean</managed-bean-name>
+    <managed-bean-class>de.hahn.blog.test1213.view.CheckboxBean</managed-bean-class>
+    <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
 </adfc-config>

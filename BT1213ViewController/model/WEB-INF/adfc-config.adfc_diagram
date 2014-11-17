@@ -92,4 +92,19 @@
       <property
          name="x">702.0</property>
    </View>
+   <View
+      id="View9">
+      <property
+         name="activityId">Checkbox</property>
+      <property
+         name="page">/Checkbox.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Checkbox&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">287.29883</property>
+      <property
+         name="x">146.0</property>
+   </View>
 </SDM>
