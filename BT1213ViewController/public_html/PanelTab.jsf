@@ -13,12 +13,25 @@
                 <af:gridRow height="100%" id="gr2">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Content -->
-                        <af:panelTabbed position="left" id="pt1">
-                            <af:showDetailItem id="tab1" text="Tab Label 1" icon="/images/Age-Child-Male-Dark-icon32.png" disclosed="true">
-                                <af:inputText label="Label 1" id="it1"/>
+                        <af:panelTabbed position="above" id="pt1" dimensionsFrom="parent">
+                            <af:showDetailItem id="tab1" text="Tab Label 1" icon="/images/Age-Child-Male-Dark-icon32.png" disclosed="true"
+                                               stretchChildren="first">
+                                <af:panelBox text="PanelBox1" id="pb1">
+                                    <f:facet name="toolbar"/>
+                                    <af:inputText label="Label 1" id="it1"/>
+                                </af:panelBox>
                             </af:showDetailItem>
-                            <af:showDetailItem id="tab2" text="Tab Label 2" icon="/images/Office-Customer-Female-Light-icon24.png"/>
-                            <af:showDetailItem id="tab3" text="Tab Label 3" icon="/images/Office-Customer-Male-Dark-icon24.png"/>
+                            <af:showDetailItem id="tab2" text="Tab Label 2" icon="/images/Office-Customer-Female-Light-icon24.png" stretchChildren="first">
+                                <af:panelGroupLayout id="pgl2" layout="scroll">
+                                    <af:inputText label="Label 3" id="it3"/>
+                                </af:panelGroupLayout>
+                            </af:showDetailItem>
+                            <af:showDetailItem id="tab3" text="Tab Label 3" icon="/images/Office-Customer-Male-Dark-icon24.png" stretchChildren="first">
+                                <af:panelBox text="PanelBox3" id="pb3">
+                                    <f:facet name="toolbar"/>
+                                    <af:inputText label="Label 2" id="it2"/>
+                                </af:panelBox>
+                            </af:showDetailItem>
                         </af:panelTabbed>
                     </af:gridCell>
                 </af:gridRow>
