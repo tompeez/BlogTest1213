@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="PanelCollectionDetachTest.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Header -->
+                        <af:outputText value="PanelCollection Detach Test" id="ot1" inlineStyle="font-size:x-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Content -->
+                        <af:panelCollection id="pc1">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.DepartmentsView.collectionModel}" var="row" rows="#{bindings.DepartmentsView.rangeSize}"
+                                      emptyText="#{bindings.DepartmentsView.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.DepartmentsView.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.DepartmentsView.collectionModel.makeCurrent}" rowSelection="single"
+                                      fetchSize="#{bindings.DepartmentsView.rangeSize}" id="t1">
+                                <af:column sortProperty="#{bindings.DepartmentsView.hints.DepartmentId.name}" sortable="true"
+                                           headerText="#{bindings.DepartmentsView.hints.DepartmentId.label}" id="c1">
+                                    <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.DepartmentsView.hints.DepartmentId.tooltip}" id="ot2">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsView.hints.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsView.hints.DepartmentName.name}" sortable="true"
+                                           headerText="#{bindings.DepartmentsView.hints.DepartmentName.label}" id="c2">
+                                    <af:outputText value="#{row.DepartmentName}" shortDesc="#{bindings.DepartmentsView.hints.DepartmentName.tooltip}" id="ot3"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsView.hints.ManagerId.name}" sortable="true"
+                                           headerText="#{bindings.DepartmentsView.hints.ManagerId.label}" id="c3">
+                                    <af:outputText value="#{row.ManagerId}" shortDesc="#{bindings.DepartmentsView.hints.ManagerId.tooltip}" id="ot4">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsView.hints.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DepartmentsView.hints.LocationId.name}" sortable="true"
+                                           headerText="#{bindings.DepartmentsView.hints.LocationId.label}" id="c4">
+                                    <af:outputText value="#{row.LocationId}" shortDesc="#{bindings.DepartmentsView.hints.LocationId.tooltip}" id="ot5">
+                                        <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentsView.hints.LocationId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>
