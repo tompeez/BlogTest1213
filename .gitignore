@@ -32,6 +32,8 @@ CVS
 
 *.log
 *.tmp
+*.lck
 tmp
 temp
 classes
+.sonar
