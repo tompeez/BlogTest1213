@@ -6,7 +6,12 @@
   Name="BT1213AppModule"
   Version="12.1.3.9.1"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="de.hahn.blog.test1213.model.adfbc.service.BT1213AppModuleImpl"
+  ComponentInterface="de.hahn.blog.test1213.model.adfbc.service.common.BT1213AppModule">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewUsage
     Name="CountriesView"
     ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.CountriesView"/>
@@ -47,6 +52,12 @@
       Name="DepartmentsORTest"
       FullName="de.hahn.blog.test1213.model.adfbc.views.DepartmentsView.DepartmentsORTest"/>
   </ViewUsage>
+  <ViewUsage
+    Name="LocationRoView1"
+    ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.LocationRoView"/>
+  <ViewUsage
+    Name="MutliColumn1"
+    ViewObjectName="de.hahn.blog.test1213.model.adfbc.views.MutliColumn"/>
   <ViewLinkUsage
     Name="DeptMgrFkLink1"
     ViewLinkObjectName="de.hahn.blog.test1213.model.adfbc.views.viewlinks.DeptMgrFkLink"
@@ -83,4 +94,14 @@
     SrcViewUsageName="de.hahn.blog.test1213.model.adfbc.service.BT1213AppModule.RegionsView"
     DstViewUsageName="de.hahn.blog.test1213.model.adfbc.service.BT1213AppModule.CountriesOfRegionView"
     Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="nextVal"
+      MethodName="nextVal">
+      <Return
+        Name="_return_type_"
+        Type="oracle.jbo.domain.Number"/>
+    </Method>
+  </ClientInterface>
 </AppModule>

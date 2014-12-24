@@ -4,7 +4,7 @@
 <ViewLink
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="EmpManagerFkLink"
-  Version="12.1.3.10.8"
+  Version="12.1.3.9.1"
   InheritPersonalization="merge"
   EntityAssociation="de.hahn.blog.test1213.model.adfbc.entities.assoc.EmpManagerFkAssoc">
   <ViewLinkDefEnd

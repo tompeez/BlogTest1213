@@ -21,6 +21,9 @@
   <view id="Checkbox">
     <page>/Checkbox.jsf</page>
   </view>
+    <view id="MultiColumn">
+    <page>/MultiColumn.jsf</page>
+  </view>
   <managed-bean id="__1">
     <managed-bean-name>DynamicRegionBean</managed-bean-name>
     <managed-bean-class>de.hahn.blog.test1213.view.DynamicRegionBean</managed-bean-class>
@@ -37,4 +40,10 @@
     <managed-bean-class>de.hahn.blog.test1213.view.CheckboxBean</managed-bean-class>
     <managed-bean-scope>view</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_MultiColumn</managed-bean-name>
+    <managed-bean-class>de.hahn.blog.test1213.view.backing.MultiColumn</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1MultiColumn.jsf-->
+  </managed-bean>  
 </adfc-config>

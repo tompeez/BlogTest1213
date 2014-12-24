@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="MultiColumnPageDef" Package="de.hahn.blog.test1213.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="MutliColumn1" RangeSize="25" DataControl="BT1213AppModuleDataControl" id="MutliColumn1Iterator"/>
+    <searchRegion Criteria="MutliColumnCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" Binds="MutliColumn1Iterator"
+                  id="MutliColumnCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="MutliColumn1Iterator" id="MutliColumn11">
+      <nodeDefinition DefName="de.hahn.blog.test1213.model.adfbc.views.MutliColumn" Name="MutliColumn110">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="EmployeeId1"/>
+          <Item Value="FirstName1"/>
+          <Item Value="LastName1"/>
+          <Item Value="Email1"/>
+          <Item Value="PhoneNumber1"/>
+          <Item Value="HireDate1"/>
+          <Item Value="JobId1"/>
+          <Item Value="Salary1"/>
+          <Item Value="CommissionPct1"/>
+          <Item Value="ManagerId1"/>
+          <Item Value="DepartmentId1"/>
+          <Item Value="DepartmentId2"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="ManagerId2"/>
+          <Item Value="LocationId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

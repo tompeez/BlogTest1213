@@ -180,7 +180,7 @@
             <value n="name" v="Default"/>
             <hash n="oracle.adfdt.controller.adfc.source.runner.AdfcRunnerLaunchSettings">
                <value n="unboundedTaskFlow" v="true"/>
-               <value n="viewActivityId" v="Start"/>
+               <value n="viewActivityId" v="MultiColumn"/>
             </hash>
             <value n="runActiveFile" v="false"/>
             <url n="targetURL" path="public_html/WEB-INF/adfc-config.xml"/>
@@ -297,6 +297,14 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Support"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Variable Resolver"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -405,6 +413,14 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Support"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Resource Bundle Variable Resolver"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -573,5 +589,8 @@
             <value n="version" v="1.1"/>
          </hash>
       </list>
+   </hash>
+   <hash n="ResourceBundleOptions">
+      <value n="BundleCreationPolicy" v="2"/>
    </hash>
 </jpr:project>

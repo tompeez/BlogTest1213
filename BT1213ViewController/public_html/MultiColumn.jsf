@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="MultiColumn.jsf" id="d1" binding="#{backingBeanScope.backing_MultiColumn.d1}">
+        <af:messages id="m1" binding="#{backingBeanScope.backing_MultiColumn.m1}"/>
+        <af:form id="f1" binding="#{backingBeanScope.backing_MultiColumn.f1}">
+            <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_MultiColumn.pgl1}">
+                <af:gridRow height="50px" id="gr2" binding="#{backingBeanScope.backing_MultiColumn.gr2}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1" binding="#{backingBeanScope.backing_MultiColumn.gc1}">
+                        <!-- Header -->
+                        <af:outputText value="MultiColumn Test" id="ot1" binding="#{backingBeanScope.backing_MultiColumn.ot1}"
+                                       inlineStyle="font-size:x-large;"/>
+                        <af:outputText value="Rowcount: #{bindings.MutliColumn1Iterator.estimatedRowCount}" id="ot28"
+                                       binding="#{backingBeanScope.backing_MultiColumn.ot28}" partialTriggers="pc1:resId1"/>
+                        <af:link text="link 1" id="l1" binding="#{backingBeanScope.backing_MultiColumn.l1}" targetFrame="_blank"
+                                 destination="http://www.heise.de" shortDesc="&amp;nbsp;" inlineStyle="statusbar : display = none;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1" binding="#{backingBeanScope.backing_MultiColumn.gr1}">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2" binding="#{backingBeanScope.backing_MultiColumn.gc2}">
+                        <!-- Content -->
+                        <af:panelGroupLayout layout="vertical" id="pgl2" binding="#{backingBeanScope.backing_MultiColumn.pgl2}">
+                            <af:panelHeader text="MutliColumn1" id="ph1" binding="#{backingBeanScope.backing_MultiColumn.ph1}">
+                                <af:query id="qryId1" headerText="Search" disclosed="true" value="#{bindings.MutliColumnCriteriaQuery.queryDescriptor}"
+                                          model="#{bindings.MutliColumnCriteriaQuery.queryModel}"
+                                          queryListener="#{bindings.MutliColumnCriteriaQuery.processQuery}"
+                                          queryOperationListener="#{bindings.MutliColumnCriteriaQuery.processQueryOperation}" resultComponentId="::pc1:resId1"
+                                          binding="#{backingBeanScope.backing_MultiColumn.qryId1}"/>
+                            </af:panelHeader>
+                            <af:panelCollection id="pc1" binding="#{backingBeanScope.backing_MultiColumn.pc1}" styleClass="AFStretchWidth">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar"/>
+                                <f:facet name="statusbar"/>
+                                <af:table value="#{bindings.MutliColumn11.collectionModel}" var="row" rows="#{bindings.MutliColumn11.rangeSize}"
+                                          emptyText="#{bindings.MutliColumn11.viewable ? 'No data to display.' : 'Access Denied.'}" rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.MutliColumn11.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.MutliColumn11.collectionModel.makeCurrent}" rowSelection="single"
+                                          fetchSize="#{bindings.MutliColumn11.rangeSize}" filterModel="#{bindings.MutliColumnCriteriaQuery.queryDescriptor}"
+                                          queryListener="#{bindings.MutliColumnCriteriaQuery.processQuery}" filterVisible="true" varStatus="vs" id="resId1"
+                                          binding="#{backingBeanScope.backing_MultiColumn.resId1}">
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.EmployeeId.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.EmployeeId.label}" id="resId1c1">
+                                        <af:outputText value="#{row.EmployeeId}" shortDesc="#{bindings.MutliColumn11.hints.EmployeeId.tooltip}" id="ot29">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.EmployeeId.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.FirstName.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.FirstName.label}" id="resId1c2">
+                                        <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.MutliColumn11.hints.FirstName.tooltip}" id="ot30"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.LastName.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.LastName.label}" id="resId1c3">
+                                        <af:outputText value="#{row.LastName}" shortDesc="#{bindings.MutliColumn11.hints.LastName.tooltip}" id="ot31"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.Email.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.Email.label}" id="resId1c4">
+                                        <af:outputText value="#{row.Email}" shortDesc="#{bindings.MutliColumn11.hints.Email.tooltip}" id="ot32"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.PhoneNumber.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.PhoneNumber.label}" id="resId1c5">
+                                        <af:outputText value="#{row.PhoneNumber}" shortDesc="#{bindings.MutliColumn11.hints.PhoneNumber.tooltip}" id="ot33"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.HireDate.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.HireDate.label}" id="resId1c6">
+                                        <f:facet name="filter">
+                                            <af:inputDate value="#{bindings.MutliColumnCriteriaQuery.queryDescriptor.filterConjunctionCriterion.criterionMap.HireDate.value}"
+                                                          id="id3" binding="#{backingBeanScope.backing_MultiColumn.id3}">
+                                                <af:convertDateTime pattern="#{bindings.MutliColumn11.hints.HireDate.format}"/>
+                                            </af:inputDate>
+                                        </f:facet>
+                                        <af:outputText value="#{row.HireDate}" shortDesc="#{bindings.MutliColumn11.hints.HireDate.tooltip}" id="ot34">
+                                            <af:convertDateTime pattern="#{bindings.MutliColumn11.hints.HireDate.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.JobId.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.JobId.label}" id="resId1c7">
+                                        <af:outputText value="#{row.JobId}" shortDesc="#{bindings.MutliColumn11.hints.JobId.tooltip}" id="ot35"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.Salary.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.Salary.label}" id="resId1c8">
+                                        <af:outputText value="#{row.Salary}" shortDesc="#{bindings.MutliColumn11.hints.Salary.tooltip}" id="ot36">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.Salary.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.CommissionPct.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.CommissionPct.label}" id="resId1c9">
+                                        <af:outputText value="#{row.CommissionPct}" shortDesc="#{bindings.MutliColumn11.hints.CommissionPct.tooltip}" id="ot37">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.CommissionPct.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.ManagerId.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.ManagerId.label}" id="resId1c10">
+                                        <af:outputText value="#{row.ManagerId}" shortDesc="#{bindings.MutliColumn11.hints.ManagerId.tooltip}" id="ot38">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.ManagerId.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.DepartmentId.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.DepartmentId.label}" id="resId1c11">
+                                        <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.MutliColumn11.hints.DepartmentId.tooltip}" id="ot39">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.DepartmentId.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.EmployeeId1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.EmployeeId1.label}" id="resId1c12">
+                                        <af:outputText value="#{row.EmployeeId1}" shortDesc="#{bindings.MutliColumn11.hints.EmployeeId1.tooltip}" id="ot40">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.EmployeeId1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.FirstName1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.FirstName1.label}" id="resId1c13">
+                                        <af:outputText value="#{row.FirstName1}" shortDesc="#{bindings.MutliColumn11.hints.FirstName1.tooltip}" id="ot41"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.LastName1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.LastName1.label}" id="resId1c14">
+                                        <af:outputText value="#{row.LastName1}" shortDesc="#{bindings.MutliColumn11.hints.LastName1.tooltip}" id="ot42"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.Email1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.Email1.label}" id="resId1c15">
+                                        <af:outputText value="#{row.Email1}" shortDesc="#{bindings.MutliColumn11.hints.Email1.tooltip}" id="ot43"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.PhoneNumber1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.PhoneNumber1.label}" id="resId1c16">
+                                        <af:outputText value="#{row.PhoneNumber1}" shortDesc="#{bindings.MutliColumn11.hints.PhoneNumber1.tooltip}" id="ot44"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.HireDate1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.HireDate1.label}" id="resId1c17">
+                                        <f:facet name="filter">
+                                            <af:inputDate value="#{bindings.MutliColumnCriteriaQuery.queryDescriptor.filterConjunctionCriterion.criterionMap.HireDate1.value}"
+                                                          id="id4" binding="#{backingBeanScope.backing_MultiColumn.id4}">
+                                                <af:convertDateTime pattern="#{bindings.MutliColumn11.hints.HireDate1.format}"/>
+                                            </af:inputDate>
+                                        </f:facet>
+                                        <af:outputText value="#{row.HireDate1}" shortDesc="#{bindings.MutliColumn11.hints.HireDate1.tooltip}" id="ot45">
+                                            <af:convertDateTime pattern="#{bindings.MutliColumn11.hints.HireDate1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.JobId1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.JobId1.label}" id="resId1c18">
+                                        <af:outputText value="#{row.JobId1}" shortDesc="#{bindings.MutliColumn11.hints.JobId1.tooltip}" id="ot46"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.Salary1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.Salary1.label}" id="resId1c19">
+                                        <af:outputText value="#{row.Salary1}" shortDesc="#{bindings.MutliColumn11.hints.Salary1.tooltip}" id="ot47">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.Salary1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.CommissionPct1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.CommissionPct1.label}" id="resId1c20">
+                                        <af:outputText value="#{row.CommissionPct1}" shortDesc="#{bindings.MutliColumn11.hints.CommissionPct1.tooltip}"
+                                                       id="ot48">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.CommissionPct1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.ManagerId1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.ManagerId1.label}" id="resId1c21">
+                                        <af:outputText value="#{row.ManagerId1}" shortDesc="#{bindings.MutliColumn11.hints.ManagerId1.tooltip}" id="ot49">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.ManagerId1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.DepartmentId1.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.DepartmentId1.label}" id="resId1c22">
+                                        <af:outputText value="#{row.DepartmentId1}" shortDesc="#{bindings.MutliColumn11.hints.DepartmentId1.tooltip}" id="ot50">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.DepartmentId1.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.DepartmentId2.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.DepartmentId2.label}" id="resId1c23">
+                                        <af:outputText value="#{row.DepartmentId2}" shortDesc="#{bindings.MutliColumn11.hints.DepartmentId2.tooltip}" id="ot51">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.DepartmentId2.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.DepartmentName.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.DepartmentName.label}" id="resId1c24">
+                                        <af:outputText value="#{row.DepartmentName}" shortDesc="#{bindings.MutliColumn11.hints.DepartmentName.tooltip}"
+                                                       id="ot52"/>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.ManagerId2.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.ManagerId2.label}" id="resId1c25">
+                                        <af:outputText value="#{row.ManagerId2}" shortDesc="#{bindings.MutliColumn11.hints.ManagerId2.tooltip}" id="ot53">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.ManagerId2.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.MutliColumn11.hints.LocationId.name}" filterable="true" sortable="true"
+                                               headerText="#{bindings.MutliColumn11.hints.LocationId.label}" id="resId1c26">
+                                        <af:outputText value="#{row.LocationId}" shortDesc="#{bindings.MutliColumn11.hints.LocationId.tooltip}" id="ot54">
+                                            <af:convertNumber groupingUsed="false" pattern="#{bindings.MutliColumn11.hints.LocationId.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                </af:table>
+                            </af:panelCollection>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_MultiColumn-->
+</f:view>
