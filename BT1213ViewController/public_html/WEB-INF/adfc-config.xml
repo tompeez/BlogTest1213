@@ -24,6 +24,29 @@
     <view id="MultiColumn">
         <page>/MultiColumn.jsf</page>
     </view>
+    <view id="InputDate">
+        <page>/InputDate.jsf</page>
+    </view>
+    <view id="NumberFormat">
+        <page>/NumberFormat.jsf</page>
+    </view>
+    <view id="DialogTest">
+        <page>/DialogTest.jsf</page>
+    </view>
+    <task-flow-call id="taskFlowCall1">
+        <task-flow-reference>
+            <document>/WEB-INF/taskFlowCall1.xml</document>
+            <id>taskFlowCall1</id>
+        </task-flow-reference>
+        <run-as-dialog/>
+    </task-flow-call>
+    <control-flow-rule id="__5">
+        <from-activity-id>DialogTest</from-activity-id>
+        <control-flow-case id="__6">
+            <from-outcome>dialog</from-outcome>
+            <to-activity-id>taskFlowCall1</to-activity-id>
+        </control-flow-case>
+    </control-flow-rule>
     <managed-bean id="__1">
         <managed-bean-name>DynamicRegionBean</managed-bean-name>
         <managed-bean-class>de.hahn.blog.test1213.view.DynamicRegionBean</managed-bean-class>

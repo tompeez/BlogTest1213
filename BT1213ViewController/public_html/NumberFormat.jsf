@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="NumberFormat.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Header -->
+                        <af:outputText value="Number Format Test" id="ot1" inlineStyle="font-size:x-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Content -->
+                        <af:inputText label="Enter Number" id="it1" value="#{bindings.myNumber1.inputValue}" autoSubmit="true">
+                            <af:convertNumber groupingUsed="false" maxFractionDigits="2" type="number" id="nc1" roundingMode="UP"/>
+                        </af:inputText>
+                        <af:outputText value="Number: #{bindings.myNumber1.inputValue}" id="ot2" partialTriggers="it1"></af:outputText>
+                        <af:inputText label="Numer 2" id="it2" value="#{bindings.myNumber21.inputValue}" autoSubmit="true">
+                            <f:convertNumber type="number" maxFractionDigits="2" groupingUsed="false"/>
+                        </af:inputText>
+                        <af:outputText value="Number 2: #{bindings.myNumber21.inputValue}" id="ot4" partialTriggers="it2"/>
+                        <af:inputText label="Number Bigdez:" id="it3" value="#{bindings.myNumber31.inputValue}" autoSubmit="true">
+                            <af:convertNumber type="number" groupingUsed="false" maxFractionDigits="2"/>
+                        </af:inputText>
+                        <af:outputText value="Number 3: #{bindings.myNumber31.inputValue}" id="ot3" partialTriggers="it3"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

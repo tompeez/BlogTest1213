@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="NumberFormatPageDef" Package="de.hahn.blog.test1213.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Name="myNumber" Type="oracle.jbo.domain.Number"/>
+      <variable Name="myNumber2" Type="oracle.jbo.domain.Number"/>
+      <variable Name="myNumber3" Type="java.math.BigDecimal"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="variables" id="myNumber1">
+      <AttrNames>
+        <Item Value="myNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="myNumber21">
+      <AttrNames>
+        <Item Value="myNumber2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="myNumber31">
+      <AttrNames>
+        <Item Value="myNumber3"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

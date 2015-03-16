@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="dialog-btf">
+    <default-activity>DialogPage</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="DialogPage">
+      <page>/DialogPage.jsf</page>
+    </view>
+    <task-flow-return id="closeDialog">
+      <outcome>
+        <name>closeDialog</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__1">
+      <from-activity-id>DialogPage</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>close</from-outcome>
+        <to-activity-id>closeDialog</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

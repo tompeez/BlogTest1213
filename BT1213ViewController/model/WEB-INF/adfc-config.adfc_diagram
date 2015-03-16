@@ -121,5 +121,79 @@
          name="y">231.0625</property>
       <property
          name="x">900.0</property>
-   </View>   
+   </View>
+   <View
+      id="View11">
+      <property
+         name="activityId">InputDate</property>
+      <property
+         name="page">/InputDate.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>InputDate&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">335.03125</property>
+      <property
+         name="x">810.0</property>
+   </View>
+   <View
+      id="View12">
+      <property
+         name="activityId">NumberFormat</property>
+      <property
+         name="page">/NumberFormat.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>NumberFormat&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">86.078125</property>
+      <property
+         name="x">788.0</property>
+   </View>
+   <View
+      id="View13">
+      <property
+         name="activityId">DialogTest</property>
+      <property
+         name="page">/DialogTest.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DialogTest&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">452.125</property>
+      <property
+         name="x">435.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall14">
+      <property
+         name="taskFlowId">taskFlowCall1</property>
+      <property
+         name="activityId">taskFlowCall1</property>
+      <property
+         name="documentReference">/WEB-INF/taskFlowCall1.xml</property>
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowCall1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">449.09375</property>
+      <property
+         name="x">630.0</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="View13"
+      to="TaskFlowCall14">
+      <property
+         name="fromOutcome">dialog</property>
+      <property
+         name="sdm:polyPoints">R50,476.0,452.14062,589.0,449.10938,L50</property>
+   </ControlFlowCase>
 </SDM>

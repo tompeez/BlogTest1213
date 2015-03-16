@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="DialogPageDef" Package="de.hahn.blog.test1213.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="LocationsView" RangeSize="25" DataControl="BT1213AppModuleDataControl" id="LocationsViewIterator"/>
+    <searchRegion Criteria="LocationsViewCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" Binds="LocationsViewIterator"
+                  id="LocationsViewCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="LocationsViewIterator" id="LocationsView">
+      <nodeDefinition DefName="de.hahn.blog.test1213.model.adfbc.views.LocationsView" Name="LocationsView0">
+        <AttrNames>
+          <Item Value="LocationId"/>
+          <Item Value="StreetAddress"/>
+          <Item Value="PostalCode"/>
+          <Item Value="City"/>
+          <Item Value="StateProvince"/>
+          <Item Value="CountryId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

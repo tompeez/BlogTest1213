@@ -17,6 +17,9 @@
     <page path="/view1.jsf" usageId="de_hahn_blog_test1213_view_view1PageDef"/>
     <page path="/BeanTest.jspx" usageId="de_hahn_blog_test1213_view_BeanTestPageDef"/>
     <page path="/MultiColumn.jsf" usageId="de_hahn_blog_test1213_view_MultiColumnPageDef"/>
+    <page path="/NumberFormat.jsf" usageId="de_hahn_blog_test1213_view_NumberFormatPageDef"/>
+    <page path="/DialogPage.jsf" usageId="de_hahn_blog_test1213_view_DialogPagePageDef"/>
+    <page path="/Dialog.jsf" usageId="de_hahn_blog_test1213_view_DialogPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="de_hahn_blog_test1213_view_DepartmentsPageDef" path="de.hahn.blog.test1213.department.DepartmentsPageDef"/>
@@ -30,6 +33,9 @@
     <page id="de_hahn_blog_test1213_view_view1PageDef" path="de.hahn.blog.test1213.view.pageDefs.view1PageDef"/>
     <page id="de_hahn_blog_test1213_view_BeanTestPageDef" path="de.hahn.blog.test1213.view.pageDefs.BeanTestPageDef"/>
     <page id="de_hahn_blog_test1213_view_MultiColumnPageDef" path="de.hahn.blog.test1213.view.pageDefs.MultiColumnPageDef"/>
+    <page id="de_hahn_blog_test1213_view_NumberFormatPageDef" path="de.hahn.blog.test1213.view.pageDefs.NumberFormatPageDef"/>
+    <page id="de_hahn_blog_test1213_view_DialogPagePageDef" path="de.hahn.blog.test1213.view.pageDefs.DialogPagePageDef"/>
+    <page id="de_hahn_blog_test1213_view_DialogPageDef" path="de.hahn.blog.test1213.view.pageDefs.DialogPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="BT1213AppModuleDataControl" Package="de.hahn.blog.test1213.model.adfbc.service"
