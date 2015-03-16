@@ -40,6 +40,9 @@
         </task-flow-reference>
         <run-as-dialog/>
     </task-flow-call>
+    <view id="TabHell">
+        <page>/TabHell.jsf</page>
+    </view>
     <control-flow-rule id="__5">
         <from-activity-id>DialogTest</from-activity-id>
         <control-flow-case id="__6">

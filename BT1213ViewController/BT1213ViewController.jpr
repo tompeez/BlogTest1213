@@ -195,10 +195,21 @@
             <value n="runActiveFile" v="false"/>
             <url n="targetURL" path="public_html/WEB-INF/adfc-config.xml"/>
          </hash>
+         <hash n="TabHell">
+            <value n="custom" v="false"/>
+            <value n="name" v="TabHell"/>
+            <hash n="oracle.adfdt.controller.adfc.source.runner.AdfcRunnerLaunchSettings">
+               <value n="unboundedTaskFlow" v="true"/>
+               <value n="viewActivityId" v="TabHell"/>
+            </hash>
+            <value n="runActiveFile" v="false"/>
+            <url n="targetURL" path="public_html/WEB-INF/adfc-config.xml"/>
+         </hash>
       </hash>
       <list n="runConfigurationList">
          <string v="Default"/>
          <string v="NumberFormat"/>
+         <string v="TabHell"/>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">

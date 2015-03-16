@@ -196,4 +196,19 @@
       <property
          name="sdm:polyPoints">R50,476.0,452.14062,589.0,449.10938,L50</property>
    </ControlFlowCase>
+   <View
+      id="View16">
+      <property
+         name="activityId">TabHell</property>
+      <property
+         name="page">/TabHell.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TabHell&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">5.03125</property>
+      <property
+         name="x">103.0</property>
+   </View>
 </SDM>
